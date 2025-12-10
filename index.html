@@ -4,104 +4,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ruta 246 | La Nueva Era</title>
-    <meta name="description" content="Bienvenido a Ruta 246. Donde el futuro comienza.">
+    <title>Ruta 246 | Pro</title>
+    <meta name="description" content="Ruta 246. Diseñado para la carretera.">
 
-    <!-- Google Fonts: Outfit for a modern, bold look -->
+    <!-- SF Pro equivalent: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for simple icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
-    <div class="cursor-glow"></div>
 
-    <nav class="navbar">
-        <div class="logo">RUTA 246</div>
-        <div class="nav-links">
-            <a href="#inicio">Inicio</a>
-            <a href="#vision">Visión</a>
-            <a href="#experiencia">Experiencia</a>
-            <a href="#contacto" class="cta-button">Únete Ahora</a>
+    <!-- Global Nav -->
+    <nav class="global-nav">
+        <div class="nav-content">
+            <a href="#" class="nav-logo"><i class="fa-solid fa-truck-fast"></i></a>
+            <ul class="nav-menu">
+                <li><a href="#">Tracto 16</a></li>
+                <li><a href="#">Remolques</a></li>
+                <li><a href="#">Rutas</a></li>
+                <li><a href="#">Motores</a></li>
+                <li><a href="#">Soporte</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <a href="#"><i class="fa-solid fa-bag-shopping"></i></a>
+            </div>
         </div>
     </nav>
+    <nav class="mobile-nav-trigger">
+        Menu
+    </nav>
 
-    <header id="inicio" class="hero">
-        <div class="hero-content">
-            <h1 class="animate-text">REDEFINIENDO<br><span class="gradient-text">EL CAMINO</span></h1>
-            <p class="fade-in">Más que un destino, es una transformación.</p>
-            <div class="hero-buttons fade-in-delay">
-                <a href="#contacto" class="primary-btn">Descubre Más</a>
-                <a href="#vision" class="secondary-btn">Ver Video</a>
+    <!-- Section 1: The "Pro" Model (Dark) -->
+    <section class="section-hero-dark">
+        <div class="hero-content fade-in-up">
+            <h2 class="subheadline">Ruta 246 Pro</h2>
+            <h1 class="headline">Titanio. De verdad.</h1>
+            <p class="cta-links">
+                <a href="#" class="cta-link">Más información ></a>
+                <a href="#" class="cta-link">Comprar ></a>
+            </p>
+        </div>
+        <div class="hero-image-container fade-in-up delay-1">
+            <img src="assets/truck_dark_mode.png" alt="Ruta 246 Pro Titanium">
+        </div>
+    </section>
+
+    <!-- Section 2: The "Air" Model (Light) -->
+    <section class="section-hero-light">
+        <div class="hero-content fade-in-up">
+            <h2 class="subheadline">Tracto 16</h2>
+            <h1 class="headline">Potencia que mueve montañas.</h1>
+            <p class="cta-links">
+                <a href="#" class="cta-link">Más información ></a>
+                <a href="#" class="cta-link">Reservar ></a>
+            </p>
+        </div>
+        <div class="hero-image-container fade-in-up delay-1">
+            <img src="assets/hero_truck_white.png" alt="Tracto 16">
+        </div>
+    </section>
+
+    <!-- Section 3: The Grid (Bento Box) -->
+    <section class="section-grid">
+        <!-- Card 1: Vision / Interior -->
+        <div class="grid-card card-large fade-in-up">
+            <div class="card-content-top">
+                <h3>Cabina Espacial</h3>
+                <p>Tu oficina. Tu palacio.</p>
+            </div>
+            <img src="assets/truck_interior.png" alt="Interior de Lujo">
+        </div>
+
+        <!-- Card 2: Feature -->
+        <div class="grid-card card-small dark-card fade-in-up">
+            <div class="card-content-center">
+                <div class="icon-large"><i class="fa-solid fa-microchip"></i></div>
+                <h3>Chip A17 Trailer</h3>
+                <p>El motor más rápido en un camión.</p>
+                <a href="#" class="cta-link">Descubre la potencia ></a>
             </div>
         </div>
-        <div class="hero-background">
-            <!-- Background effects here -->
-            <div class="orb orb-1"></div>
-            <div class="orb orb-2"></div>
-        </div>
-    </header>
 
-    <section id="vision" class="vision-section">
-        <div class="container">
-            <h2 class="section-title">Nuestra <span class="highlight">Visión</span></h2>
-            <div class="cards-grid">
-                <div class="card glass">
-                    <div class="icon-box">🚀</div>
-                    <h3>Innovación Total</h3>
-                    <p>Tecnología de punta aplicada a cada kilómetro de la experiencia.</p>
-                </div>
-                <div class="card glass">
-                    <div class="icon-box">💎</div>
-                    <h3>Diseño Premium</h3>
-                    <p>Estética y funcionalidad fusionadas en una armonía perfecta.</p>
-                </div>
-                <div class="card glass">
-                    <div class="icon-box">⚡</div>
-                    <h3>Velocidad</h3>
-                    <p>Resultados inmediatos con una eficiencia sin precedentes.</p>
-                </div>
+        <!-- Card 3: Feature -->
+        <div class="grid-card card-small light-card fade-in-up">
+            <div class="card-content-center">
+                <div class="icon-large" style="color:#ff3b30"><i class="fa-solid fa-heart-pulse"></i></div>
+                <h3>Salud del Conductor</h3>
+                <p>Monitoreo vital en tiempo real.</p>
+                <a href="#" class="cta-link">Ver más ></a>
             </div>
         </div>
     </section>
 
-    <section id="experiencia" class="experience-section">
-        <div class="container split-layout">
-            <div class="text-content">
-                <h2>Una Experiencia <br>Inolvidable</h2>
-                <p>En Ruta 246, no solo llegas a un lugar, llegas a un nuevo estado mental. Hemos cuidado cada detalle
-                    para que tu viaje sea legendario.</p>
-                <ul class="feature-list">
-                    <li><span>✦</span> Atención personalizada 24/7</li>
-                    <li><span>✦</span> Espacios exclusivos</li>
-                    <li><span>✦</span> Conexiones globales</li>
-                </ul>
-            </div>
-            <div class="image-content">
-                <div class="gradient-border">
-                    <img src="assets/experience_visual.png" alt="Experiencia Visual Ruta 246"
-                        style="width: 100%; border-radius: 20px; display: block;">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer id="contacto">
+    <!-- Footer -->
+    <footer class="global-footer">
         <div class="footer-content">
-            <h2>¿Listo para hacer historia?</h2>
-            <form class="contact-form">
-                <input type="email" placeholder="Tu correo electrónico" required>
-                <button type="submit">Iniciar Viaje</button>
-            </form>
-            <div class="socials">
-                <a href="#">Instagram</a>
-                <a href="#">Twitter</a>
-                <a href="#">LinkedIn</a>
+            <div class="footer-notes">
+                <p>1. La potencia se mide en caballos de fuerza pura sangre trailera.</p>
+                <p>2. Requiere suscripción a Ruta+ para el piloto automático.</p>
             </div>
-            <p class="copyright">© 2024 Ruta 246. Todos los derechos reservados.</p>
+            <hr>
+            <div class="footer-links">
+                <div class="link-column">
+                    <h4>Descubrir</h4>
+                    <a href="#">Tracto 16 Pro</a>
+                    <a href="#">Tracto 16</a>
+                    <a href="#">Ruta Watch</a>
+                    <a href="#">Accesorios</a>
+                </div>
+                <div class="link-column">
+                    <h4>Cuenta</h4>
+                    <a href="#">Gestionar mi ID de Trailero</a>
+                    <a href="#">Ruta Store</a>
+                    <a href="#">iCloud (Nube de Humo)</a>
+                </div>
+                <div class="link-column">
+                    <h4>Ruta 246</h4>
+                    <a href="#">Buscar un taller</a>
+                    <a href="#">Empleo</a>
+                    <a href="#">Prensa</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Copyright © 2024 Ruta 246 Inc. Todos los derechos reservados.</p>
+                <div class="legal-links">
+                    <a href="#">Política de Privacidad</a> |
+                    <a href="#">Términos de Uso</a> |
+                    <a href="#">Ventas y Reembolsos</a>
+                </div>
+                <p class="locale">México</p>
+            </div>
         </div>
     </footer>
 

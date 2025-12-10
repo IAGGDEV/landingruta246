@@ -1,18 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Custom Cursor Glow
-    const cursor = document.querySelector('.cursor-glow');
-
-    document.addEventListener('mousemove', (e) => {
-        // Use requestAnimationFrame for smoother performance
-        requestAnimationFrame(() => {
-            cursor.style.left = e.clientX + 'px';
-            cursor.style.top = e.clientY + 'px';
-        });
-    });
-
-    // Intersection Observer for Animations
+    // Intersection Observer for Apple-like reveal animations
     const observerOptions = {
-        threshold: 0.1,
+        threshold: 0.15, // Trigger slightly later for better effect
         rootMargin: "0px 0px -50px 0px"
     };
 
@@ -20,40 +9,24 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
+                // Optional: Stop observing once revealed if you want it to happen only once. 
+                // Apple sites often re-trigger or stay visible. Let's keep it simple.
                 observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
 
-    const animatedElements = document.querySelectorAll('.animate-text, .fade-in, .card, .text-content, .image-placeholder');
-    animatedElements.forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out';
-        observer.observe(el);
-    });
+    const animatedElements = document.querySelectorAll('.fade-in-up');
+    animatedElements.forEach(el => observer.observe(el));
 
-    // Add visible class styling dynamically
-    const style = document.createElement('style');
-    style.innerHTML = `
-        .visible {
-            opacity: 1 !important;
-            transform: translateY(0) !important;
+    // Navbar transparency check (optional polish)
+    window.addEventListener('scroll', () => {
+        const nav = document.querySelector('.global-nav');
+        if (window.scrollY > 0) {
+            nav.style.backgroundColor = 'rgba(22, 22, 23, 0.8)';
+        } else {
+            // Keep it consistent or make it fully transparent at top if desired
+            // nav.style.backgroundColor = 'rgba(22, 22, 23, 1)'; 
         }
-    `;
-    document.head.appendChild(style);
-
-    // Smooth Scroll for Anchor Links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        });
     });
 });
